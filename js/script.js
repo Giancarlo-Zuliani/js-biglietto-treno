@@ -6,17 +6,33 @@ const PRICE = 0.21;
 
 var totalArea = document.querySelector('#total');
 
+var text
 //calcolo il prezzo e aggiungo le eccezioni per  età
 
 function calcPrice(){
   let kilometri = document.querySelector('#kilometri').value;
   let age = document.querySelector('#age').value;
-  let totalPrice = kilometri * PRICE;
+  totalPrice = kilometri * PRICE;
 if (age >= 65){
   totalPrice = (totalPrice / 100) * 60;
  }
 else if (age < 18){
   totalPrice = (totalPrice / 100) * 80;
  }
+ text = "Biglietto valido per " + kilometri + " kilometri al costo di " + totalPrice.toFixed(2) + " euro";
   totalArea.innerHTML = totalPrice.toFixed(2);
+  document.getElementById('downloadbutton').style.display="block";
+}
+
+//fuction for download file with travel info
+
+
+function download(filename, text) {
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+  element.style.display = 'none';
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
 }
