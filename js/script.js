@@ -6,7 +6,8 @@ const PRICE = 0.21;
 
 var totalArea = document.querySelector('#total');
 
-var text
+var text;
+
 //calcolo il prezzo e aggiungo le eccezioni per  età
 
 function calcPrice(){
@@ -19,12 +20,13 @@ if (age >= 65){
 else if (age < 18){
   totalPrice = (totalPrice / 100) * 80;
  }
- text = "Biglietto valido per " + kilometri + " kilometri al costo di " + totalPrice.toFixed(2) + " euro";
+  text = "Biglietto valido per " + kilometri + " kilometri al costo di " + totalPrice.toFixed(2) + " euro";
   totalArea.innerHTML = totalPrice.toFixed(2);
   document.getElementById('downloadbutton').style.display="block";
 }
 
-//fuction for download file with travel info
+
+// questa funzione fa scaricare un file .txt con alcune info del biglietto,crea scarica e  rimuove un tag <a>
 
 
 function download(filename, text) {
