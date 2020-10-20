@@ -12,11 +12,11 @@ function calcPrice(){
   let kilometri = document.querySelector('#kilometri').value;
   let age = document.querySelector('#age').value;
   let totalPrice = kilometri * PRICE;
-if (age > 65){
+if (age >= 65){
   totalPrice = (totalPrice / 100) * 60;
  }
 else if (age < 18){
   totalPrice = (totalPrice / 100) * 80;
  }
- totalArea.innerHTML = totalPrice.toFixed(2);
+  totalArea.innerHTML = totalPrice.toFixed(2);
 }

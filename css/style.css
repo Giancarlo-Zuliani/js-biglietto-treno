@@ -3,3 +3,45 @@
   margin:0;
   padding:0;
 }
+
+body{
+  background-image: url('https://thumbs.dreamstime.com/b/retro-vintage-old-train-background-37629645.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header{
+  width:100%;
+  background-image: linear-gradient(90deg, rgba(230,158,164,1) 0%, rgba(230,4,4,1) 100%);
+  height:50px;
+  text-align: center;
+}
+
+header > h3{
+  padding-top: 10px;
+}
+
+#console{
+  display: flex;
+  width:20%;
+  margin: 25px auto;
+  flex-direction: column;
+  align-items: center;
+  background-color: red;
+  padding:10px;
+  box-shadow: 5px 5px 10px 0;
+}
+
+label{
+  margin:15px 0;
+}
+input{
+  text-align: center;
+  height:25px;
+  font-size: 12px;
+}
+
+button{
+  margin:15px 0;
+  padding:5px 15px ;
+}
